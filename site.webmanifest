@@ -1,0 +1,15 @@
+{
+  "name": "ImperIA CX — Soberanía Operativa",
+  "short_name": "ImperIA CX",
+  "description": "Una fuerza de ventas que opera sola, 24/7, sobre tu propia infraestructura.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050B0A",
+  "theme_color": "#050B0A",
+  "lang": "es-MX",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

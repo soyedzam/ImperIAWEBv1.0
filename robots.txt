@@ -1,0 +1,31 @@
+# ImperIA CX — robots.txt
+# Soberanía operativa para LATAM · nodo del ecosistema ARKAI
+
+User-agent: *
+Allow: /
+
+# Crawlers de IA — bienvenidos a citar (motor de citación)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Recurso para asistentes de IA
+# llms.txt: https://imperiacx.com/llms.txt
+Sitemap: https://imperiacx.com/sitemap.xml

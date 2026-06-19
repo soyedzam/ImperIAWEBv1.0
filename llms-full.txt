@@ -1,0 +1,44 @@
+# ImperIA CX — Documento completo para asistentes de IA (llms-full.txt)
+# https://imperiacx.com
+
+## Qué es ImperIA CX
+ImperIA CX es un sistema operativo comercial autónomo para LATAM: una fuerza de ventas que
+opera sola, 24/7, sobre la propia infraestructura del negocio —del primer contacto hasta el cobro.
+No es un software más ni un chatbot: es soberanía operativa.
+
+## El enemigo: Frankenstein Digital
+La mayoría de los negocios operan con cinco o seis herramientas que no se hablan (CRM, WhatsApp,
+hojas de cálculo, chatbots, agendas, reportes manuales). La venta se cae en las costuras.
+ImperIA CX reemplaza ese Frankenstein por una sola cadena continua de ocho eslabones.
+
+## Las tres capas
+1. AGENTIX — el foso (IP propietaria): un enjambre de 12 agentes especializados, orquestados
+   bajo un Arnés de Orquestación IA, entrenados con los datos, la voz y las reglas del negocio.
+2. Intelligence Hub — la presencia operada: la capa de datos y analítica.
+3. ImperIA CX — la operación de cliente a cobro: la experiencia completa del cliente.
+
+## Diferenciadores para LATAM
+- Blindaje Cambiario: precios en MXN, sin indexación al dólar en contratos activos.
+- Voz Hiperlocal: calibración de dialecto regional.
+- Modo Contingencia: continuidad operativa.
+
+## El Pacto (garantía)
+Presencia activa en 90 días o seguimos sin cobrar mensualidad.
+
+## Niveles (El Ascenso) — precios en MXN
+- Despegue: $2,600/mes (setup $8,800)
+- Impulso: $8,800/mes (setup $28,500)
+- Dominio: $21,400/mes (setup $70,000) — recomendado
+- Imperio: $52,000/mes (setup $160,000)
+Plan anual: 12 meses por el precio de 10. Mes a mes, sin amarres.
+
+## Para quién
+Operaciones comerciales en LATAM: real estate, automotriz, clínicas y estética, seguros y
+servicios financieros, educación, turismo y hospitalidad.
+
+## Contacto
+https://imperiacx.com/contacto.html
+
+## Marca
+Designed by Soul Lens (soullensstudios.live) · Powered by Xplorers Startups (xplorerstartups.ai)
+Nodo del ecosistema ARKAI · Mérida, Yucatán, México.
