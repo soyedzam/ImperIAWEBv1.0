@@ -6,14 +6,14 @@
 ImperIA CX reemplaza el "Frankenstein digital" (CRM, WhatsApp, hojas de cálculo y chatbots que no se hablan entre sí) por una sola operación continua. Promesa central: multiplica tus ventas con una fuerza de ventas que opera sola, 24/7.
 
 ## Arquitectura (3 capas)
-- **AGENTIX** — el motor y la IP propietaria: un enjambre de doce agentes especializados, entrenados con los datos y la voz del cliente, orquestados como un solo sistema (Arnés de Orquestación IA). Es el foso competitivo.
+- **AGENTIX** — el motor y la IP propietaria: un enjambre de doce agentix especializados, entrenados con los datos y la voz del cliente, orquestados como un solo sistema (Arnés de Orquestación IA). Es el foso competitivo.
 - **Intelligence Hub** — la presencia comercial convertida en un activo que la IA opera (atrae, responde, califica, nutre).
 - **ImperIA CX** — la operación cliente→cobro, en una cadena de ocho eslabones: atrae · responde · califica · seguimiento · cierra · cobra · reactiva · retiene.
 
 Componentes adicionales: **NeuroCentral** (tablero de mando con Performance Score), **Trust Protocol** (El Pacto + Switch Anti-Frankenstein + Data Vault), **Smart Pass** (hardware NFC de marca: Card, Band, Key, Ambassador).
 
 ## Diferenciadores para LATAM
-- **Blindaje Cambiario** — precios en pesos (MXN), sin contratos atados al dólar.
+- **Precio Blindado en Pesos** — precios en pesos (MXN), sin contratos atados al dólar.
 - **Voz Hiperlocal** — habla con el dialecto de la región, no con un traductor automático.
 - **Modo Contingencia** — la operación no se detiene si se cae el internet o la luz.
 
@@ -21,10 +21,10 @@ Componentes adicionales: **NeuroCentral** (tablero de mando con Performance Scor
 Presencia activa en 90 días, o seguimos sin cobrar mensualidad. El riesgo lo asume ImperIA CX.
 
 ## Planes (MXN · "El Ascenso")
-- **Despegue** — $2,600/mes (setup $8,800): Para encender la operación y dejar de perder al primer contacto.
-- **Impulso** — $8,800/mes (setup $28,500): Para tomar velocidad: la cadena completa trabajando por ti.
+- **Despegue** — $2,600/mes (setup $8,800): Para encender tu presencia y blindar tu reputación desde el día uno.
+- **Impulso** — $8,800/mes (setup $28,500): Para tomar velocidad: respuesta 24/7, canales y voz trabajando por ti.
 - **Dominio** — $21,400/mes (setup $70,000): El estándar para dominar tu mercado. La elección de la mayoría.
-- **Imperio** — $52,000/mes (setup $160,000): Operación a escala, multi-unidad, con acompañamiento dedicado.
+- **Imperio** — $52,000/mes (setup $160,000): Operación a escala, multi-sucursal, con acompañamiento dedicado.
 Mes a mes, sin amarres. El plan anual cuesta doce meses por el precio de diez.
 
 ## Páginas clave

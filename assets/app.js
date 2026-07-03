@@ -44,7 +44,7 @@
     document.querySelectorAll(".vsl").forEach(function(box){
       box.addEventListener("click", function(){
         var src = box.getAttribute("data-src");
-        if(!src){ box.querySelector(".vsl__label").textContent = "VIDEO PENDIENTE · [VALIDAR]"; return; }
+        if(!src){ box.querySelector(".vsl__label").textContent = "Video próximamente"; return; }
         var f = document.createElement("iframe");
         f.src = src + (src.indexOf("?")>-1?"&":"?") + "autoplay=1";
         f.allow = "autoplay; fullscreen; picture-in-picture";
@@ -95,6 +95,7 @@
     var c = document.createElement("canvas"), ctx = c.getContext("2d"), w,h, dpr = Math.min(window.devicePixelRatio||1,2);
     host.appendChild(c);
     var N = 26, pts = [];
+    var sig = (getComputedStyle(document.documentElement).getPropertyValue("--jade-claro")||"#1FB673").trim();
     function size(){ w = host.offsetWidth; h = host.offsetHeight; c.width=w*dpr; c.height=h*dpr; c.style.width=w+"px"; c.style.height=h+"px"; ctx.setTransform(dpr,0,0,dpr,0,0); }
     function init(){ pts = []; for(var i=0;i<N;i++){ pts.push({x:Math.random()*w, y:Math.random()*h, vx:(Math.random()-.5)*.16, vy:(Math.random()-.5)*.16, r:2+Math.random()*2.4}); } }
     function frame(){
@@ -104,9 +105,9 @@
         if(p.x<0||p.x>w)p.vx*=-1; if(p.y<0||p.y>h)p.vy*=-1;
         for(var j=i+1;j<pts.length;j++){
           var q=pts[j], dx=p.x-q.x, dy=p.y-q.y, d=Math.sqrt(dx*dx+dy*dy);
-          if(d<120){ ctx.strokeStyle="rgba(111,205,178,"+(0.10*(1-d/120))+")"; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y); ctx.stroke(); }
+          if(d<120){ ctx.globalAlpha=0.30*(1-d/120); ctx.strokeStyle=sig; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y); ctx.stroke(); ctx.globalAlpha=1; }
         }
-        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.283); ctx.fillStyle="rgba(168,230,210,.55)"; ctx.fill();
+        ctx.globalAlpha=0.85; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.283); ctx.fillStyle=sig; ctx.fill(); ctx.globalAlpha=1;
       }
       requestAnimationFrame(frame);
     }
@@ -131,7 +132,11 @@
 
   /* ---- GA4 event helper (dataLayer-ready) ---- */
   function track(name, params){
-    try{ window.dataLayer = window.dataLayer || []; window.dataLayer.push(Object.assign({event:name}, params||{})); }catch(e){}
+    try{
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({event:name}, params||{}));
+      if(typeof window.gtag === "function"){ window.gtag("event", name, params||{}); }
+    }catch(e){}
   }
 
   /* ---- Test A/B/C above-the-fold (?v=a|b|c · 33/33/33) ---- */
@@ -165,9 +170,9 @@
       var pct = Math.round(score/(total*3)*100);
       var sc = result.querySelector("[data-engine-score]"); if(sc) sc.firstChild.textContent = pct;
       var vd = result.querySelector("[data-engine-verdict]");
-      if(vd){ vd.textContent = pct>=70 ? "Tu operación ya tiene base, pero hay fuga recuperable. Te mostramos dónde."
-            : pct>=40 ? "Tu operación pierde ventas en las costuras. La buena noticia: tiene cierre."
-            : "Tienes un Frankenstein digital severo. Cada semana se escapa venta que ya pagaste."; }
+      if(vd){ vd.textContent = pct>=70 ? "Buena base. Pero todavía hay ventas escapándose en los huecos —y son las más fáciles de recuperar."
+            : pct>=40 ? "Estás perdiendo ventas por respuestas que llegan tarde y seguimiento que no ocurre. La buena noticia: tiene cierre."
+            : "Tu operación es un Frankenstein: cada semana se te escapa venta que ya pagaste con publicidad. Urge coserla."; }
       result.classList.add("show");
       track("assessment_completed", {score:pct});
     }
@@ -178,14 +183,59 @@
     show(0);
   }
 
-  /* ---- RADAR / formularios de captura (consentimiento + éxito sin recargar) ---- */
+  /* ---- Detecta la sección actual (la del CTA, o la que está en el viewport) ---- */
+  function nearestSection(el){
+    var s = (el && el.closest) ? el.closest("section") : null;
+    if(!s){
+      var mid = window.innerHeight/2, secs = document.querySelectorAll("main section");
+      for(var i=0;i<secs.length;i++){ var r=secs[i].getBoundingClientRect(); if(r.top<=mid && r.bottom>=mid){ s=secs[i]; break; } }
+    }
+    if(!s) return "";
+    var h = s.querySelector(".eyebrow, h1, h2, h3");
+    return h ? h.textContent.trim().replace(/\s+/g," ").slice(0,80) : "";
+  }
+
+  /* ---- WhatsApp click-to-chat · adjunta página + sección al mensaje ---- */
+  function waCtx(){
+    var num = (document.body.getAttribute("data-wa")||"").replace(/\D/g,"");
+    var page = ((document.body.getAttribute("data-page")||document.title||"").split(/[·|—]/)[0]).trim();
+    document.addEventListener("click", function(e){
+      var a = e.target.closest("[data-wa-cta]"); if(!a) return;
+      e.preventDefault();
+      var sec = nearestSection(a);
+      var msg = 'Hola 👋 Vengo de la página "'+page+'"'+(sec?(' · sección: "'+sec+'"'):'')+'. Quiero saber más sobre ImperIA CX.';
+      track("wa_click", {page:page, section:sec});
+      if(num){ window.open("https://wa.me/"+num+"?text="+encodeURIComponent(msg), "_blank", "noopener"); }
+    });
+  }
+
+  /* ---- RADAR / formularios → CX (un POST con todo el contexto) + éxito sin recargar ---- */
   function radar(){
+    var CX   = document.body.getAttribute("data-cx") || "";
+    var page = ((document.body.getAttribute("data-page")||document.title||"").split(/[·|—]/)[0]).trim();
     document.querySelectorAll("form[data-capture]").forEach(function(f){
       f.addEventListener("submit", function(e){
         e.preventDefault();
         var consent = f.querySelector("input[type=checkbox]");
         if(consent && !consent.checked){ consent.focus(); return; }
-        track(f.getAttribute("data-capture")||"lead_submit", {form:f.getAttribute("data-form")||"radar"});
+        var data = {};
+        f.querySelectorAll("input,select,textarea").forEach(function(inp){
+          if(!inp.name) return;
+          data[inp.name] = (inp.type==="checkbox") ? inp.checked : inp.value;
+        });
+        var cap = f.getAttribute("data-capture") || "lead_submit";
+        var payload = Object.assign({}, data, {
+          evento: cap,
+          formulario: f.getAttribute("data-form") || "radar",
+          pagina: page,
+          seccion: nearestSection(f),
+          url: location.href,
+          referente: document.referrer || "",
+          query: location.search || "",
+          ts: new Date().toISOString()
+        });
+        track(cap, {form:payload.formulario, page:page, section:payload.seccion});
+        if(CX){ try{ fetch(CX, {method:"POST", mode:"no-cors", headers:{"Content-Type":"application/json"}, body:JSON.stringify(payload)}); }catch(err){} }
         var ok = f.getAttribute("data-ok") || "Listo. Te llega por aquí en breve. 🎯";
         f.innerHTML = '<p style="color:var(--jade-luz);font-family:var(--f-mono);font-size:.9rem;text-align:center;padding:10px 0">'+ok+'</p>';
       });
@@ -204,6 +254,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", function(){
-    abTest(); reveals(); faq(); drawer(); vsl(); calc(); engine(); radar(); swarm(); agentixSwarm(); exitIntent();
+    abTest(); reveals(); faq(); drawer(); vsl(); calc(); engine(); radar(); waCtx(); swarm(); agentixSwarm(); exitIntent();
   });
 })();

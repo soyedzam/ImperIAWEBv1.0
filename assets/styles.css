@@ -1,28 +1,28 @@
 /* ============================================================
-   ImperIA CX — Sistema de Diseño "Enjambre Orquestado"
+   ImperIA CX — Sistema de Diseño "Inteligencia Viva · Biósfera" (v5)
    SSOT visual. Sin hex hardcodeado fuera de :root.
-   Doctrina: jade informa · ámbar convierte (máx 1 ámbar/viewport)
-   El enjambre se insinúa · WhatsApp = artefacto enmarcado
-   Firma: EL NODO DE SEÑAL
+   Doctrina: verde vivo informa · vino convierte (máx 1 vino/viewport)
+   El enjambre vive · WhatsApp = artefacto enmarcado
+   Firma: LA MURMURACIÓN VIVA (nodo de señal)
    ============================================================ */
 
 :root{
-  /* Fondo / profundidad */
-  --abismo:#050B0A; --obsidiana:#07100E; --obsidiana-2:#0B1815; --obsidiana-3:#0F1F1A;
-  /* Jade — señal / información */
-  --jade:#3FA98E; --jade-claro:#6FCDB2; --jade-luz:#A8E6D2; --jade-profundo:#1E5C4B;
-  /* Ámbar — acción / conversión */
-  --ambar:#D4A24E; --ambar-claro:#E9C77E;
-  /* Neutros */
-  --marfil:#EDF5F1; --niebla:#9FB8AE; --niebla-2:#6B8077;
+  /* Fondo / superficie — papel cálido (Biósfera) */
+  --abismo:#F3EEE4; --obsidiana:#FBF7EE; --obsidiana-2:#ECE4D4; --obsidiana-3:#E3D9C5;
+  /* Verde vivo — señal / información (clorofila, no neón) */
+  --jade:#0F8A57; --jade-claro:#1FB673; --jade-luz:#0B6B43; --jade-profundo:#0B5638;
+  /* Vino Imperial — acción / conversión */
+  --ambar:#8E2F3C; --ambar-claro:#74212D;
+  /* Neutros — foreground = tinta cálida */
+  --marfil:#201C15; --niebla:#6F6559; --niebla-2:#928879;
   /* Enemigo — Frankenstein */
-  --frank:#9A8F66; --frank-oscuro:#3E3A28; --frank-zone:#121008;
+  --frank:#9A8C5E; --frank-oscuro:#C9BE9A; --frank-zone:#ECE3CD;
   /* Estado */
-  --rojo-fuga:#E0644E; --verde-ok:#6FCDB2;
+  --rojo-fuga:#C0492B; --verde-ok:#0F8A57;
 
   /* Tipografía */
-  --f-display:"Space Grotesk",system-ui,sans-serif;
-  --f-body:"Archivo",system-ui,sans-serif;
+  --f-display:"Bricolage Grotesque",system-ui,sans-serif;
+  --f-body:"Hanken Grotesk",system-ui,sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,monospace;
 
   /* Radios */
@@ -30,7 +30,7 @@
   /* Easing */
   --ease:cubic-bezier(.22,1,.36,1);
   /* Espaciado vertical de sección */
-  --pad-y:clamp(72px,9vw,140px);
+  --pad-y:clamp(84px,10vw,160px);
   /* Anchos */
   --wrap:1180px; --wrap-narrow:760px;
   /* Bordes sutiles */
@@ -68,7 +68,7 @@ strong,b{color:var(--marfil); font-weight:600}
 /* ---------- Eyebrow + nodo de señal (único pulso permitido) ---------- */
 .eyebrow{display:inline-flex; align-items:center; gap:.6em;
   font-family:var(--f-mono); font-size:.74rem; font-weight:500;
-  letter-spacing:.28em; text-transform:uppercase; color:var(--jade-claro);
+  letter-spacing:.28em; text-transform:uppercase; color:var(--jade);
   margin:0 0 1.4em}
 .eyebrow .nodo{width:7px; height:7px; border-radius:50%; background:var(--jade-claro);
   box-shadow:0 0 0 0 color-mix(in srgb,var(--jade-claro) 60%,transparent);
@@ -121,8 +121,9 @@ strong,b{color:var(--marfil); font-weight:600}
 .nav__bar{display:flex; align-items:center; justify-content:space-between; height:70px}
 .brand{display:flex; align-items:center; gap:.6em; font-family:var(--f-display);
   font-weight:700; font-size:1.18rem; letter-spacing:-.01em; color:var(--marfil)}
-.brand .mark{width:11px; height:11px; border-radius:50%; background:var(--jade-claro);
-  box-shadow:0 0 14px color-mix(in srgb,var(--jade-claro) 70%,transparent)}
+.brand .mark{width:24px; height:24px; flex:none; display:inline-flex; align-items:center; justify-content:center}
+.brand .mark svg{width:100%; height:100%; display:block}
+.brand .ia{color:var(--jade)}
 .brand small{font-family:var(--f-mono); font-weight:400; font-size:.6rem;
   letter-spacing:.22em; color:var(--niebla-2); text-transform:uppercase; display:block; margin-top:2px}
 .nav__links{display:flex; align-items:center; gap:6px; list-style:none; margin:0; padding:0}
@@ -156,7 +157,7 @@ strong,b{color:var(--marfil); font-weight:600}
 .hero .wrap{position:relative; z-index:1}
 .hero h1{max-width:18ch}
 .hero .lead{margin-top:1.2em}
-.kicker{font-family:var(--f-mono); font-size:.8rem; letter-spacing:.14em; color:var(--jade-claro);
+.kicker{font-family:var(--f-mono); font-size:.8rem; letter-spacing:.14em; color:var(--jade);
   text-transform:uppercase; margin-top:2.4em; display:flex; gap:1.2em; flex-wrap:wrap}
 .kicker span{display:inline-flex; align-items:center; gap:.5em}
 .kicker span::before{content:""; width:5px; height:5px; border-radius:50%; background:var(--jade)}
@@ -185,7 +186,7 @@ strong,b{color:var(--marfil); font-weight:600}
   font-family:var(--f-mono); font-size:.72rem; letter-spacing:.1em; color:var(--jade); opacity:.75}
 .eslabon h4{margin:.5em 0 .35em; font-family:var(--f-display); font-size:1.08rem}
 .eslabon p{font-size:.88rem; margin:0; color:var(--niebla)}
-.eslabon .verbo{font-family:var(--f-mono); font-size:.64rem; letter-spacing:.2em; text-transform:uppercase; color:var(--jade-claro)}
+.eslabon .verbo{font-family:var(--f-mono); font-size:.64rem; letter-spacing:.2em; text-transform:uppercase; color:var(--jade)}
 
 /* ---------- Tarjetas genéricas ---------- */
 .card{border:1px solid var(--line-soft); border-radius:var(--r-lg); padding:30px;
@@ -197,7 +198,7 @@ strong,b{color:var(--marfil); font-weight:600}
 .card p:last-child{margin-bottom:0}
 .card--feature{padding:34px}
 .pill{display:inline-block; font-family:var(--f-mono); font-size:.66rem; letter-spacing:.2em;
-  text-transform:uppercase; color:var(--jade-claro); border:1px solid var(--line); border-radius:999px;
+  text-transform:uppercase; color:var(--jade); border:1px solid var(--line); border-radius:999px;
   padding:.4em .9em; margin-bottom:16px}
 
 /* ---------- AGENTIX (el foso) ---------- */
@@ -219,7 +220,7 @@ strong,b{color:var(--marfil); font-weight:600}
   box-shadow:0 0 0 1px color-mix(in srgb,var(--jade) 14%,transparent), 0 40px 90px -40px #000d, 0 0 60px -20px color-mix(in srgb,var(--jade) 30%,transparent)}
 .wa{background:#0b141a; border-radius:10px; overflow:hidden; max-width:380px; margin-inline:auto; font-family:"Helvetica Neue",Arial,sans-serif}
 .wa__hd{background:#1f2c33; padding:11px 14px; display:flex; align-items:center; gap:11px}
-.wa__hd .av{width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,#3FA98E,#1E5C4B); display:grid; place-items:center; color:#fff; font-weight:700; font-size:.9rem}
+.wa__hd .av{width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,var(--jade-claro),var(--jade-profundo)); display:grid; place-items:center; color:#fff; font-weight:700; font-size:.9rem}
 .wa__hd .nm{color:#e9edef; font-size:.92rem; font-weight:600}
 .wa__hd .st{color:#8696a0; font-size:.72rem}
 .wa__body{padding:16px 12px; background:#0b141a; min-height:160px; background-image:radial-gradient(circle at 20% 30%, #ffffff05 0, transparent 40%)}
@@ -228,7 +229,7 @@ strong,b{color:var(--marfil); font-weight:600}
 .wa__out{background:#005c4b; margin-left:auto; border-top-right-radius:0}
 .wa__msg .t{display:block; font-size:.62rem; color:#ffffff7a; text-align:right; margin-top:3px}
 .wa__voice{display:flex; align-items:center; gap:9px; max-width:78%; background:#202c33; padding:9px 12px; border-radius:8px; margin-bottom:8px}
-.wa__voice .play{width:26px; height:26px; border-radius:50%; background:#3FA98E; display:grid; place-items:center; color:#0b141a; flex:none}
+.wa__voice .play{width:26px; height:26px; border-radius:50%; background:var(--jade-claro); display:grid; place-items:center; color:#0b141a; flex:none}
 .wa__wave{flex:1; height:22px; display:flex; align-items:center; gap:2px}
 .wa__wave i{flex:1; background:#8696a0; border-radius:2px; opacity:.7}
 .wa__voice .dur{font-size:.64rem; color:#8696a0}
@@ -240,7 +241,7 @@ strong,b{color:var(--marfil); font-weight:600}
 .tier:hover{border-color:var(--line); transform:translateY(-4px)}
 .tier--hero{border-color:var(--jade); background:color-mix(in srgb,var(--jade) 8%,transparent);
   box-shadow:0 0 0 1px var(--line), 0 30px 70px -34px color-mix(in srgb,var(--jade) 60%,transparent)}
-.tier__tag{font-family:var(--f-mono); font-size:.64rem; letter-spacing:.22em; text-transform:uppercase; color:var(--jade-claro)}
+.tier__tag{font-family:var(--f-mono); font-size:.64rem; letter-spacing:.22em; text-transform:uppercase; color:var(--jade)}
 .tier--hero .tier__tag{color:var(--jade-luz)}
 .tier__name{font-family:var(--f-display); font-size:1.5rem; font-weight:700; margin:.3em 0 .1em}
 .tier__sub{font-size:.86rem; color:var(--niebla); min-height:2.6em; margin-bottom:14px}
@@ -303,7 +304,7 @@ strong,b{color:var(--marfil); font-weight:600}
 .field input:focus, .field select:focus, .field textarea:focus{outline:none; border-color:var(--jade)}
 .consent{display:flex; gap:.7em; align-items:flex-start; font-size:.8rem; color:var(--niebla-2); line-height:1.5}
 .consent input{margin-top:.25em; accent-color:var(--jade)}
-.consent a{color:var(--jade-claro); text-decoration:underline}
+.consent a{color:var(--jade); text-decoration:underline}
 
 /* ---------- Franja de cifras ---------- */
 .stat-row{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center}
@@ -404,7 +405,7 @@ strong,b{color:var(--marfil); font-weight:600}
 [data-ab-variant].ab-active{display:block}
 .ab-flag{position:fixed;left:12px;bottom:12px;z-index:90;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.18em;
   color:var(--niebla-2);background:color-mix(in srgb,var(--abismo) 80%,transparent);border:1px solid var(--line-soft);
-  border-radius:999px;padding:4px 10px;text-transform:uppercase;pointer-events:none;opacity:.55}
+  border-radius:999px;padding:4px 10px;text-transform:uppercase;pointer-events:none;opacity:.55;display:none}
 
 /* ---------- Calculadora: resultado → CTA ---------- */
 .calc__cta{margin-top:24px;text-align:center}
@@ -449,7 +450,7 @@ strong,b{color:var(--marfil); font-weight:600}
 .radar__form input{flex:1;min-width:200px;background:var(--obsidiana);border:1px solid var(--line);border-radius:var(--r-md);
   padding:13px 15px;color:var(--marfil);font-family:var(--f-body);font-size:.95rem}
 .radar__consent{font-size:.74rem;color:var(--niebla-2);margin-top:12px;display:flex;gap:8px;justify-content:center;align-items:flex-start;text-align:left;max-width:440px;margin-inline:auto}
-.radar__consent a{color:var(--jade-claro)}
+.radar__consent a{color:var(--jade)}
 
 /* ---------- PROOF · Grid de reseñas Google (PROHIBIDO carrusel) ---------- */
 .greviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
@@ -473,3 +474,30 @@ strong,b{color:var(--marfil); font-weight:600}
 .langtoggle__cur{color:var(--niebla-2);font-weight:500}
 .langtoggle__cur::after{content:"/";margin:0 6px;color:var(--niebla-2);font-weight:400}
 .drawer__lang{margin-top:26px;padding-top:20px;border-top:1px solid var(--line-soft)}
+
+/* ---------- Co-Founders (HUMAN · fotos reales) ---------- */
+.founders__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:840px;margin:38px auto 0}
+.founder__ph{aspect-ratio:4/5;display:grid;place-items:center;align-content:center;gap:6px;background:linear-gradient(160deg,var(--obsidiana-3),var(--jade-profundo))}
+.founder__ph span{font-family:var(--f-display);font-weight:700;font-size:2.4rem;color:var(--marfil)}
+.founder__ph small{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--jade-luz)}
+.founder{background:var(--obsidiana-2);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;text-align:center;transition:border-color .3s var(--ease),transform .3s var(--ease)}
+.founder:hover{border-color:var(--jade);transform:translateY(-3px)}
+.founder img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;display:block;
+  filter:grayscale(1) contrast(1.05) brightness(.96);transition:filter .45s var(--ease)}
+.founder:hover img{filter:grayscale(0) contrast(1) brightness(1)}
+.founder__body{padding:16px 14px 18px}
+.founder__name{font-family:var(--f-display);font-weight:600;color:var(--marfil);font-size:1.06rem;letter-spacing:-.01em}
+.founder__role{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.16em;color:var(--jade-luz);text-transform:uppercase;margin-top:6px}
+@media(max-width:760px){.founders__grid{grid-template-columns:repeat(2,1fr);max-width:520px}}
+@media(max-width:520px){.founders__grid{grid-template-columns:1fr;max-width:300px}}
+
+/* ---------- WhatsApp flotante (click-to-chat con contexto de sección) ---------- */
+.wa-float{position:fixed;right:clamp(16px,3vw,28px);bottom:clamp(16px,3vw,28px);z-index:60;
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+  background:#1faf54;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 0 rgba(31,175,84,.5);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease);animation:waPulse 2.6s infinite}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 14px 38px rgba(0,0,0,.55)}
+@keyframes waPulse{0%{box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 0 rgba(31,175,84,.55)}
+  70%{box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 16px rgba(31,175,84,0)}
+  100%{box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 0 rgba(31,175,84,0)}}
+@media(prefers-reduced-motion:reduce){.wa-float{animation:none}}

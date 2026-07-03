@@ -1,0 +1,5 @@
+Contact: mailto:info@xplorerstartups.ai
+Preferred-Languages: es, en
+Canonical: https://imperiacx.com/.well-known/security.txt
+Expires: 2027-01-01T00:00:00.000Z
+# ImperIA CX — divulgación responsable de vulnerabilidades [VALIDAR: correo de seguridad real]
