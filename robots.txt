@@ -27,5 +27,5 @@ User-agent: Google-Extended
 Allow: /
 
 # Recurso para asistentes de IA
-# llms.txt: https://imperiacx.com/llms.txt
-Sitemap: https://imperiacx.com/sitemap.xml
+# llms.txt: https://cxedi.ai/llms.txt
+Sitemap: https://cxedi.ai/sitemap.xml

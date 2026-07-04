@@ -1,5 +1,5 @@
 # ImperIA CX — Documento completo para asistentes de IA (llms-full.txt)
-# https://imperiacx.com
+# https://cxedi.ai
 
 ## Qué es ImperIA CX
 ImperIA CX es un sistema operativo comercial autónomo para LATAM: una fuerza de ventas que
@@ -37,7 +37,7 @@ Operaciones comerciales en LATAM: real estate, automotriz, clínicas y estética
 servicios financieros, educación, turismo y hospitalidad.
 
 ## Contacto
-https://imperiacx.com/contacto.html
+https://cxedi.ai/contacto.html
 
 ## Marca
 Designed by Soul Lens (soullensstudios.live) · Powered by Xplorers Startups (xplorerstartups.ai)

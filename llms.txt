@@ -28,13 +28,13 @@ Presencia activa en 90 días, o seguimos sin cobrar mensualidad. El riesgo lo as
 Mes a mes, sin amarres. El plan anual cuesta doce meses por el precio de diez.
 
 ## Páginas clave
-- Plataforma: https://imperiacx.com/plataforma.html
-- AGENTIX (el motor): https://imperiacx.com/agentix.html
-- Trust Protocol: https://imperiacx.com/trust-protocol.html
-- Precios: https://imperiacx.com/precios.html
-- Casos: https://imperiacx.com/casos.html
-- Contacto / Diagnóstico: https://imperiacx.com/contacto.html
+- Plataforma: https://cxedi.ai/plataforma.html
+- AGENTIX (el motor): https://cxedi.ai/agentix.html
+- Trust Protocol: https://cxedi.ai/trust-protocol.html
+- Precios: https://cxedi.ai/precios.html
+- Casos: https://cxedi.ai/casos.html
+- Contacto / Diagnóstico: https://cxedi.ai/contacto.html
 
 ## Quién está detrás
 ImperIA CX es un nodo del ecosistema ARKAI. Diseño por Soul Lens; tecnología por Xplorers Startups.
-Contacto: a través de https://imperiacx.com/contacto.html
+Contacto: a través de https://cxedi.ai/contacto.html
