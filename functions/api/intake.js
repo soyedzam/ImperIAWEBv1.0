@@ -8,6 +8,8 @@ export async function onRequestPost(context) {
   const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
   let d;
   try { d = await request.json(); } catch (e) { return json({ ok: false, error: "bad json" }, 400); }
+  const origin = request.headers.get("Origin");
+  if (origin) { try { if (new URL(origin).hostname !== new URL(request.url).hostname) return json({ ok: false }, 403); } catch (e) {} }
   if (d.website) return json({ ok: true });               // honeypot
   if (!d.email && !d.whatsapp) return json({ ok: false, error: "missing contact" }, 422);
   try {
