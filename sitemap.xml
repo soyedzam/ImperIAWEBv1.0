@@ -115,6 +115,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cxedi.ai/contacto.html"/>
   </url>
   <url>
+    <loc>https://cxedi.ai/donde-pierdo-ventas.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://cxedi.ai/donde-pierdo-ventas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cxedi.ai/donde-pierdo-ventas.html"/>
+  </url>
+  <url>
     <loc>https://cxedi.ai/inmobiliario.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
