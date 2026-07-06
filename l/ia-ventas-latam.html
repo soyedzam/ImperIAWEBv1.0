@@ -74,7 +74,7 @@ body{
   font-family:var(--f-body); font-size:17px; line-height:1.7;
   font-weight:400; letter-spacing:.002em;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-  overflow-x:hidden;
+  overflow-x:clip;
 }
 img{max-width:100%; height:auto; display:block}
 a{color:inherit; text-decoration:none}
@@ -669,6 +669,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--violeta-claro);outl
 .drawer__dock .btn--ambar{color:var(--abismo)}
 .drawer__dock .btn--violeta{color:var(--violeta-luz)}
 
+/* ---- Selector Mensual/Anual (revisión humana #9) ---- */
+.billing-toggle{display:inline-flex; gap:4px; margin-top:26px; padding:4px; border:1px solid var(--line-soft);
+  border-radius:999px; background:color-mix(in srgb,var(--abismo) 55%,transparent)}
+.billing-toggle button{border:0; background:transparent; color:var(--niebla); cursor:pointer;
+  font-family:var(--f-mono); font-size:.76rem; letter-spacing:.05em; padding:9px 18px; border-radius:999px;
+  transition:background .25s var(--ease), color .25s var(--ease)}
+.billing-toggle button.on{background:var(--ambar); color:var(--abismo); font-weight:700}
+.billing-toggle button:not(.on):hover{color:var(--marfil)}
+.tier__save{font-family:var(--f-mono); font-size:.71rem; letter-spacing:.04em; color:#34e0a1; margin-top:6px}
+/* ---- Bio de cofundadores (revisión humana #10) ---- */
+.founder__bio{font-size:.9rem; color:var(--niebla); line-height:1.65; margin:10px auto 0; max-width:34ch; text-align:center}
+
 </style>
 </head>
 <body data-wa="" data-cx="" data-page="La IA de ventas hecha para LATAM">
@@ -730,14 +742,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--violeta-claro);outl
 <main>
 <header class="hero"><div class="hero__bg" data-swarm></div>
   <div class="wrap">
-    <div class="gstars"><span class="gstars__g"><b>G</b><i>o</i><u>o</u><b>g</b><s>l</s><i>e</i></span><span class="gstars__stars">★★★★★</span><span class="gstars__num">4.9</span><span>· 22 reseñas</span></div><span class="eyebrow"><span class="nodo"></span>IMPERIA CX · SOBERANÍA OPERATIVA</span><h1>Una IA de ventas que entiende cómo se vende aquí. No una traducción.</h1><p class="lead">Cobra en pesos, habla como se habla en tu región y no se detiene cuando se cae el internet. ImperIA CX está hecha para el terreno donde tú operas.</p><div class="btn-row" style="margin-top:2em"><a class="btn btn--ambar btn--lg" href="/donde-pierdo-ventas.html">Ver dónde pierdo ventas</a><a class="btn btn--violeta btn--lg" href="/plataforma.html">Ver la plataforma</a></div><ul class="risk"><li>Presencia activa en 90 días o no cobras</li><li>Responde en segundos, 24/7</li><li>Sin amarres</li></ul><div class="kicker"><span>Opera 24/7</span><span>Sobre tus datos</span><span>Hecha para LATAM</span></div>
+    <div class="gstars"><span class="gstars__g"><b>G</b><i>o</i><u>o</u><b>g</b><s>l</s><i>e</i></span><span class="gstars__stars">★★★★★</span><span class="gstars__num">4.9</span><span>· 22 reseñas</span></div><span class="eyebrow"><span class="nodo"></span>IMPERIA CX · SOBERANÍA OPERATIVA</span><h1>Una IA de ventas que entiende cómo se vende aquí. No una traducción.</h1><p class="lead">Cobra en pesos, habla como se habla en tu región y no se detiene cuando se cae el internet. ImperIA CX está hecha para el terreno donde tú operas.</p><div class="btn-row" style="margin-top:2em"><a class="btn btn--ambar btn--lg" href="/donde-pierdo-ventas.html">Ver dónde pierdo ventas</a><a class="btn btn--violeta btn--lg" href="/plataforma.html">Ver la plataforma</a></div><ul class="risk"><li>Presencia activa en 90 días o no pagas</li><li>Responde en segundos, 24/7</li><li>Sin plazos forzosos</li></ul><div class="kicker"><span>Opera 24/7</span><span>Sobre tus datos</span><span>Hecha para LATAM</span></div>
   </div></header>
 <section class="section frank"><div class="wrap">
     <div class="section-head"><span class="eyebrow"><span class="nodo"></span>POR QUÉ SE TE CAE LA VENTA</span><h2>No te faltan herramientas. Te falta que se hablen.</h2><p class="lead">Las soluciones gringas no entienden tu mercado: indexan al dólar, suenan a traductor automático y asumen una infraestructura que aquí no siempre está. Operar con ellas es pelear con una herramienta que no es de aquí.</p></div>
     <div class="frank-grid"><div class="frank-tool">CRM aislado</div><div class="frank-tool">WhatsApp suelto</div><div class="frank-tool">Hoja de cálculo</div><div class="frank-tool">Chatbot que no cierra</div></div>
     <div class="frank-vs">Piezas sueltas · cero responsables · la venta se enfría y se pierde</div>
   </div></section>
-<section class="section "><div class="wrap"><div class="section-head center"><span class="eyebrow"><span class="nodo"></span>LO QUE CAMBIA</span><h2>Tres cosas que notas la primera semana.</h2></div><div class="grid g-3"><div class="card reveal"><div class="ico">₱</div><h3>Precio Blindado en Pesos</h3><p>Tus precios en pesos, sin contratos atados al dólar.</p></div><div class="card reveal"><div class="ico">◉</div><h3>Voz Hiperlocal</h3><p>Habla con el dialecto de tu región, no del traductor.</p></div><div class="card reveal"><div class="ico">⚡</div><h3>Modo Contingencia</h3><p>Si se cae la luz o el internet, la operación no se detiene.</p></div></div></div></section>
+<section class="section "><div class="wrap"><div class="section-head center"><span class="eyebrow"><span class="nodo"></span>LO QUE CAMBIA</span><h2>Tres cosas que notas la primera semana.</h2></div><div class="grid g-3"><div class="card reveal"><div class="ico">₱</div><h3>Precio Blindado en Moneda Local</h3><p>Tu contrato en moneda local, sin ataduras al dólar.</p></div><div class="card reveal"><div class="ico">◉</div><h3>Voz Hiperlocal</h3><p>Habla con el dialecto de tu región, no del traductor.</p></div><div class="card reveal"><div class="ico">⚡</div><h3>Modo Contingencia</h3><p>Si se cae la luz o el internet, la operación no se detiene.</p></div></div></div></section>
 <section class="section cta-band" id="diagnostico"><div class="wrap narrow">
     <div class="section-head center"><span class="eyebrow"><span class="nodo"></span>TU PRIMER PASO</span><h2>Veámoslo sobre tus propios números.</h2><p class="lead">Pídenos un diagnóstico. Te mostramos, sobre tu operación real, exactamente dónde se te está cayendo la venta y cómo la cierra el sistema.</p></div>
     <form class="form" style="max-width:520px;margin-inline:auto" onsubmit="return false">
@@ -1226,6 +1238,29 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--violeta-claro);outl
     abTest(); reveals(); faq(); drawer(); vsl(); calc(); engine(); score(); radar(); waCtx(); swarm(); agentixSwarm(); exitIntent();
   });
 })();
+
+/* ---- Selector Mensual/Anual (El Ascenso) ---- */
+document.querySelectorAll("[data-billing]").forEach(function (tg) {
+  var sec = tg.closest("section"); if (!sec) return;
+  tg.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-mode]");
+    if (!b || b.classList.contains("on")) return;
+    tg.querySelectorAll("button[data-mode]").forEach(function (x) {
+      var on = x === b;
+      x.classList.toggle("on", on);
+      x.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    var annual = b.dataset.mode === "annual";
+    var en = document.documentElement.lang.indexOf("en") === 0;
+    sec.querySelectorAll(".tier__price[data-annual]").forEach(function (pEl) {
+      var amt = pEl.querySelector(".tier__amt"), per = pEl.querySelector("small");
+      if (amt) amt.textContent = annual ? pEl.dataset.annual : pEl.dataset.monthly;
+      if (per) per.textContent = annual ? (en ? "/yr" : "/año") : (en ? "/mo" : "/mes");
+    });
+    sec.querySelectorAll(".tier__save").forEach(function (sv) { sv.hidden = !annual; });
+    if (window.dataLayer) dataLayer.push({ event: "billing_toggle", mode: b.dataset.mode });
+  });
+});
 
 </script>
 </body>

@@ -441,3 +441,26 @@
     abTest(); reveals(); faq(); drawer(); vsl(); calc(); engine(); score(); radar(); waCtx(); swarm(); agentixSwarm(); exitIntent();
   });
 })();
+
+/* ---- Selector Mensual/Anual (El Ascenso) ---- */
+document.querySelectorAll("[data-billing]").forEach(function (tg) {
+  var sec = tg.closest("section"); if (!sec) return;
+  tg.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-mode]");
+    if (!b || b.classList.contains("on")) return;
+    tg.querySelectorAll("button[data-mode]").forEach(function (x) {
+      var on = x === b;
+      x.classList.toggle("on", on);
+      x.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    var annual = b.dataset.mode === "annual";
+    var en = document.documentElement.lang.indexOf("en") === 0;
+    sec.querySelectorAll(".tier__price[data-annual]").forEach(function (pEl) {
+      var amt = pEl.querySelector(".tier__amt"), per = pEl.querySelector("small");
+      if (amt) amt.textContent = annual ? pEl.dataset.annual : pEl.dataset.monthly;
+      if (per) per.textContent = annual ? (en ? "/yr" : "/año") : (en ? "/mo" : "/mes");
+    });
+    sec.querySelectorAll(".tier__save").forEach(function (sv) { sv.hidden = !annual; });
+    if (window.dataLayer) dataLayer.push({ event: "billing_toggle", mode: b.dataset.mode });
+  });
+});

@@ -75,7 +75,7 @@ body{
   font-family:var(--f-body); font-size:17px; line-height:1.7;
   font-weight:400; letter-spacing:.002em;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-  overflow-x:hidden;
+  overflow-x:clip;
 }
 img{max-width:100%; height:auto; display:block}
 a{color:inherit; text-decoration:none}
@@ -670,6 +670,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--violeta-claro);outl
 .drawer__dock .btn--ambar{color:var(--abismo)}
 .drawer__dock .btn--violeta{color:var(--violeta-luz)}
 
+/* ---- Selector Mensual/Anual (revisión humana #9) ---- */
+.billing-toggle{display:inline-flex; gap:4px; margin-top:26px; padding:4px; border:1px solid var(--line-soft);
+  border-radius:999px; background:color-mix(in srgb,var(--abismo) 55%,transparent)}
+.billing-toggle button{border:0; background:transparent; color:var(--niebla); cursor:pointer;
+  font-family:var(--f-mono); font-size:.76rem; letter-spacing:.05em; padding:9px 18px; border-radius:999px;
+  transition:background .25s var(--ease), color .25s var(--ease)}
+.billing-toggle button.on{background:var(--ambar); color:var(--abismo); font-weight:700}
+.billing-toggle button:not(.on):hover{color:var(--marfil)}
+.tier__save{font-family:var(--f-mono); font-size:.71rem; letter-spacing:.04em; color:#34e0a1; margin-top:6px}
+/* ---- Bio de cofundadores (revisión humana #10) ---- */
+.founder__bio{font-size:.9rem; color:var(--niebla); line-height:1.65; margin:10px auto 0; max-width:34ch; text-align:center}
+
 </style>
 </head>
 <body data-wa="" data-cx="" data-page="Inmobiliario · ImperIA CX">
@@ -730,7 +742,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--violeta-claro);outl
 </div>
 <main>
 <header class="page-hero"><div class="page-hero__bg"></div>
-  <div class="wrap narrow"><div class="crumb"><a href="/">Inicio</a> / Inmobiliario · ImperIA CX</div><div class="gstars"><span class="gstars__g"><b>G</b><i>o</i><u>o</u><b>g</b><s>l</s><i>e</i></span><span class="gstars__stars">★★★★★</span><span class="gstars__num">4.9</span><span>· 22 reseñas</span></div><span class="eyebrow"><span class="nodo"></span>SOLUCIÓN POR INDUSTRIA</span><h1>En el real estate, el que contesta primero, vende.</h1><p class="lead">El prospecto inmobiliario no espera. Escribe a tres desarrollos a la vez y compra con el que le contesta bien y rápido. Si tu vendedor está en una junta o es domingo, ese cliente ya es de otro.</p><ul class="risk"><li>Presencia activa en 90 días o no cobras</li><li>Responde en segundos, 24/7</li><li>Sobre tus datos</li><li>Sin amarres</li></ul></div></header>
+  <div class="wrap narrow"><div class="crumb"><a href="/">Inicio</a> / Inmobiliario · ImperIA CX</div><div class="gstars"><span class="gstars__g"><b>G</b><i>o</i><u>o</u><b>g</b><s>l</s><i>e</i></span><span class="gstars__stars">★★★★★</span><span class="gstars__num">4.9</span><span>· 22 reseñas</span></div><span class="eyebrow"><span class="nodo"></span>SOLUCIÓN POR INDUSTRIA</span><h1>En el real estate, el que contesta primero, vende.</h1><p class="lead">El prospecto inmobiliario no espera. Escribe a tres desarrollos a la vez y compra con el que le contesta bien y rápido. Si tu vendedor está en una junta o es domingo, ese cliente ya es de otro.</p><ul class="risk"><li>Presencia activa en 90 días o no pagas</li><li>Responde en segundos, 24/7</li><li>Sobre tus datos</li><li>Sin plazos forzosos</li></ul></div></header>
 <section class="section frank"><div class="wrap">
     <div class="section-head"><span class="eyebrow"><span class="nodo"></span>EL ENEMIGO EN TU INDUSTRIA</span><h2>No es que falten compradores. Es que el tuyo ya agendó con otro.</h2><p class="lead">Tu cliente pregunta por una propiedad y nadie responde hasta el lunes. Para entonces ya agendó visita con la competencia. Eso no es falta de demanda: es fuga por lentitud.</p></div>
     <div class="frank-grid"><div class="frank-tool">Portal con clientes sin atender</div><div class="frank-tool">WhatsApp del vendedor saturado</div><div class="frank-tool">Excel de prospectos</div><div class="frank-tool">Sin seguimiento a visitas</div></div>
@@ -742,8 +754,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--violeta-claro);outl
           <div class="wa__body"><div class="wa__msg wa__in">hola! vi el depa de 2 recámaras, sigue disponible? lo vi en la noche y nadie me contestó en otro lado 😅<span class="t">22:38 ✓✓</span></div><div class="wa__msg wa__out">¡Hola, Mariana! Sí, sigue disponible. ¿Te late que te aparte una visita esta semana? Tengo jueves y sábado.<span class="t">22:38 ✓✓</span></div><div class="wa__msg wa__in">sábado porfa. qué bueno que sí contestan a esta hora<span class="t">22:39 ✓✓</span></div><div class="wa__msg wa__out">Listo, sábado. Te confirmo dirección y un par de opciones de horario por aquí mismo. 🙌<span class="t">22:39 ✓✓</span></div><div class="wa__voice"><span class="play">▶</span><div class="wa__wave"><i style="height:35%"></i><i style="height:65%"></i><i style="height:48%"></i><i style="height:80%"></i><i style="height:58%"></i><i style="height:72%"></i><i style="height:42%"></i><i style="height:88%"></i><i style="height:52%"></i><i style="height:68%"></i><i style="height:36%"></i></div><span class="dur">0:10</span></div></div></div></div></div></div></section>
 <section class="section section--obs"><div class="wrap narrow">
     <div class="pacto reveal"><span class="sello">EL PACTO · GARANTÍA OFICIAL</span>
-      <h2>Nos jugamos el resultado contigo.</h2><p class="promesa">Presencia activa en 90 días, o seguimos sin cobrar mensualidad.</p>
-      <p style="margin-top:1.4em;color:var(--niebla)">No te pedimos fe. Te pedimos 90 días. Si tu operación no está viva y produciendo en ese plazo, no cobramos la mensualidad hasta que lo esté. El riesgo es nuestro, no tuyo.</p>
+      <h2>No te pedimos fe. Te pedimos 90 días.</h2><p class="promesa">Presencia activa en 90 días, o seguimos trabajando sin cobrar tu mensualidad.</p>
+      <p style="margin-top:1.4em;color:var(--niebla)">Es un compromiso contractual, no una frase de marketing: si a los 90 días tu operación no está viva y produciendo, tu mensualidad se suspende y nuestro equipo sigue trabajando hasta que lo esté. Sin letras pequeñas y sin condiciones ocultas. Asumimos el riesgo porque conocemos el resultado.</p>
     </div></div></section>
 <section class="section cta-band" id="diagnostico"><div class="wrap narrow">
     <div class="section-head center"><span class="eyebrow"><span class="nodo"></span>TU PRIMER PASO</span><h2>Veámoslo sobre tus propios números.</h2><p class="lead">Pídenos un diagnóstico. Te mostramos, sobre tu operación real, exactamente dónde se te está cayendo la venta y cómo la cierra el sistema.</p></div>
@@ -1233,6 +1245,29 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--violeta-claro);outl
     abTest(); reveals(); faq(); drawer(); vsl(); calc(); engine(); score(); radar(); waCtx(); swarm(); agentixSwarm(); exitIntent();
   });
 })();
+
+/* ---- Selector Mensual/Anual (El Ascenso) ---- */
+document.querySelectorAll("[data-billing]").forEach(function (tg) {
+  var sec = tg.closest("section"); if (!sec) return;
+  tg.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-mode]");
+    if (!b || b.classList.contains("on")) return;
+    tg.querySelectorAll("button[data-mode]").forEach(function (x) {
+      var on = x === b;
+      x.classList.toggle("on", on);
+      x.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    var annual = b.dataset.mode === "annual";
+    var en = document.documentElement.lang.indexOf("en") === 0;
+    sec.querySelectorAll(".tier__price[data-annual]").forEach(function (pEl) {
+      var amt = pEl.querySelector(".tier__amt"), per = pEl.querySelector("small");
+      if (amt) amt.textContent = annual ? pEl.dataset.annual : pEl.dataset.monthly;
+      if (per) per.textContent = annual ? (en ? "/yr" : "/año") : (en ? "/mo" : "/mes");
+    });
+    sec.querySelectorAll(".tier__save").forEach(function (sv) { sv.hidden = !annual; });
+    if (window.dataLayer) dataLayer.push({ event: "billing_toggle", mode: b.dataset.mode });
+  });
+});
 
 </script>
 </body>

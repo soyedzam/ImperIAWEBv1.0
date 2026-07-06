@@ -18,7 +18,7 @@ ImperIA CX reemplaza ese Frankenstein por una sola cadena continua de ocho eslab
 3. ImperIA CX — la operación de cliente a cobro: la experiencia completa del cliente.
 
 ## Diferenciadores para LATAM
-- Precio Blindado en Pesos: precios en MXN, sin indexación al dólar en contratos activos.
+- Precio Blindado en Moneda Local: precios en MXN (México), sin indexación al dólar en contratos activos.
 - Voz Hiperlocal: calibración de dialecto regional.
 - Modo Contingencia: continuidad operativa.
 
@@ -30,7 +30,7 @@ Presencia activa en 90 días o seguimos sin cobrar mensualidad.
 - Impulso: $8,800/mes (setup $28,500)
 - Dominio: $21,400/mes (setup $70,000) — recomendado
 - Imperio: $52,000/mes (setup $160,000)
-Plan anual: 12 meses por el precio de 10. Mes a mes, sin amarres.
+Plan anual: 12 meses por el precio de 10. Mes a mes, sin plazos forzosos.
 
 ## Para quién
 Operaciones comerciales en LATAM: real estate, automotriz, clínicas y estética, seguros y

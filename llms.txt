@@ -13,7 +13,7 @@ ImperIA CX reemplaza el "Frankenstein digital" (CRM, WhatsApp, hojas de cálculo
 Componentes adicionales: **NeuroCentral** (tablero de mando con Performance Score), **Trust Protocol** (El Pacto + Switch Anti-Frankenstein + Data Vault), **Smart Pass** (hardware NFC de marca: Card, Band, Key, Ambassador).
 
 ## Diferenciadores para LATAM
-- **Precio Blindado en Pesos** — precios en pesos (MXN), sin contratos atados al dólar.
+- **Precio Blindado en Moneda Local** — contratos en moneda local (MXN para México), sin ataduras al dólar.
 - **Voz Hiperlocal** — habla con el dialecto de la región, no con un traductor automático.
 - **Modo Contingencia** — la operación no se detiene si se cae el internet o la luz.
 
@@ -25,7 +25,7 @@ Presencia activa en 90 días, o seguimos sin cobrar mensualidad. El riesgo lo as
 - **Impulso** — $8,800/mes (setup $28,500): Para tomar velocidad: respuesta 24/7, canales y voz trabajando por ti.
 - **Dominio** — $21,400/mes (setup $70,000): El estándar para dominar tu mercado. La elección de la mayoría.
 - **Imperio** — $52,000/mes (setup $160,000): Operación a escala, multi-sucursal, con acompañamiento dedicado.
-Mes a mes, sin amarres. El plan anual cuesta doce meses por el precio de diez.
+Mes a mes, sin plazos forzosos. El plan anual cuesta doce meses por el precio de diez.
 
 ## Páginas clave
 - Plataforma: https://cxedi.ai/plataforma.html
